@@ -4,7 +4,7 @@
   "description": "backendtypescript setup",
   "main": "server.js",
   "scripts": {
-    "dist":"npx tsc",
+    "dist": "npx tsc",
     "start": "node dist/server.js",
     "prepare": "husky",
     "dev": "nodemon src/server.ts"
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/node": "^22.15.21",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
