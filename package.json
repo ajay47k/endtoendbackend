@@ -4,14 +4,19 @@
   "description": "backendtypescript setup",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "dist":"npx tsc",
+    "start": "node dist/index.js",
     "prepare": "husky",
-    "test":"node test.js"
+    "dev": "nodemon src/index.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.15.21",
     "husky": "^9.1.7",
-    "lint-staged": "^16.0.0"
+    "lint-staged": "^16.0.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
