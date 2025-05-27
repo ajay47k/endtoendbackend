@@ -3,8 +3,8 @@ import { THttpError } from '../types/types'
 import responseMessage from '../constant/responseMessage'
 import { EApplicationEnvironment } from '../constant/application'
 import config from '../config/config'
+import logger from './logger'
 
- 
 export default (err: Error | unknown, req: Request, errorStatusCode: number = 500): THttpError => {
     const errorObj: THttpError = {
         success: false,
@@ -19,8 +19,8 @@ export default (err: Error | unknown, req: Request, errorStatusCode: number = 50
         trace: err instanceof Error ? { error: err.stack } : null
     }
     // Log
-    // eslint-disable-next-line no-console
-    console.error(`CONTROLLER_ERROR`, {
+     
+    logger.error(`CONTROLLER_ERROR`, {
         meta: errorObj
     })
 
